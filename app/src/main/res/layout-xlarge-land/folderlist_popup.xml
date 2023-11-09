@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/frmBTDevice">
+
+    <TextView
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Select folder"
+        android:textSize="25sp" />
+
+
+  </FrameLayout>
+  <!--android:indeterminateTint="@color/CHERRY"/>-->
+  <ListView
+      android:id="@+id/btdevice_list"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/frmBTDevice"
+      android:layout_alignStart="@id/frmBTDevice"
+      android:background="@android:color/darker_gray">
+
+  </ListView>
+
+
+
+
+</RelativeLayout>

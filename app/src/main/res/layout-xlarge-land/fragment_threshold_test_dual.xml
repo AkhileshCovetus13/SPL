@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".singlechamber.FragmentParaVviOthers">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:background="@drawable/border"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:id="@+id/tabCapture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Capture" />
+
+                <Button
+                    android:layout_marginRight="2dp"
+                    android:id="@+id/tabSense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sense" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black" />
+
+
+            <FrameLayout
+                android:id="@+id/frame_vvi_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></FrameLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1.3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:text="Current"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginLeft="40dp"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:text="Temporary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="14dp"
+                        android:background="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/mTxtCurrentMode"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/border">
+
+                            <Spinner
+                                android:id="@+id/mSpinMode"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:spinnerMode="dropdown"
+                                tools:ignore="SpeakableTextPresentCheck" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/ASpinText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="#ffffff"
+                            android:text="Mode"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/mLayoutAmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="14dp"
+                        android:background="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/mTxtCurrentAmp"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/border">
+
+                            <Spinner
+                                android:id="@+id/mSpinAmp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:spinnerMode="dropdown"
+                                tools:ignore="SpeakableTextPresentCheck" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/BSpinText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="#ffffff"
+                            android:text="Amplitude"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/mStartValueCapture"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:text="(Start Value)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/mLayoutPw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="14dp"
+                        android:background="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/mTxtCurrentPW"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/border">
+
+                            <Spinner
+                                android:id="@+id/mSpinPw"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:spinnerMode="dropdown"
+                                tools:ignore="SpeakableTextPresentCheck" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/BBSpinText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="#ffffff"
+                            android:text="Pulse Width"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:id="@+id/mTxtPwStartValue"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:text="(Start Value)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="14dp"
+                        android:background="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/mTxtCurrentPaceAv"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/border">
+
+                            <Spinner
+                                android:id="@+id/mSpinPaceDelay"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:spinnerMode="dropdown"
+                                tools:ignore="SpeakableTextPresentCheck" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/CSpinText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="#ffffff"
+                            android:text="Pace AV Delay"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:paddingLeft="10dp"
+                android:layout_weight="1.3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:text="Current"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_marginLeft="40dp"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:text="Temporary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="14dp"
+                        android:background="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/mTxtCurrentRate"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/border">
+
+                            <Spinner
+                                android:id="@+id/mSpinRate"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:spinnerMode="dropdown"
+                                tools:ignore="SpeakableTextPresentCheck" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/DSpinText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="#ffffff"
+                            android:text="Rate"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="14dp"
+                        android:background="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/mTxtCurrentSense"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/border">
+
+                            <Spinner
+                                android:id="@+id/mSpinSense"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:spinnerMode="dropdown"
+                                tools:ignore="SpeakableTextPresentCheck" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/ESpinText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="#ffffff"
+                            android:text="Sense"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/mStartValueSense"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:textSize="18dp"
+                        android:textColor="@color/black"
+                        android:text="(Start Value)"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_marginRight="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="14dp"
+                        android:background="@color/gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/mTxtCurrentSenseAv"
+                            android:textSize="20dp"
+                            android:textColor="@color/white"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="150dp"
+                            android:layout_height="60dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/border">
+
+                            <Spinner
+                                android:id="@+id/mSpinSenseDelay"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:spinnerMode="dropdown"
+                                tools:ignore="SpeakableTextPresentCheck" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/FSpinText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:background="#ffffff"
+                            android:text="Sense AV Delay"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="13sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/white"
+                android:layout_weight="0.4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/mImgClose"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ic_close_screen"/>
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</FrameLayout>

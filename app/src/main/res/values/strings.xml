@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">SPL-Demo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="marker">Marker</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="next">Next</string>
+    <string name="period">Period</string>
+    <string name="bpm"> bpm</string>
+    <string name="ms"> ms</string>
+    <string name="Email" translatable="false">_email</string>
+    <string name="spin_title_mode">Mode</string>
+
+    <string name="bat" translatable="false">Bat(V)</string>
+    <string name="empty">" "</string>
+    <string name="volt"> v</string>
+    <string name="ok">OK</string>
+    <string name="eri">ERI</string>
+    <string name="eol">EOL</string>
+    <string name="pinn8820">Pinnacle 8820</string>
+    <string name="pinnr297">Pinnacle R+ 297</string>
+    <string name="charak747">Charak 747</string>
+    <string name="trinity">Trinity</string>
+    <string name="pinn8820am">Pinnacle 8820 AM</string>
+    <string name="pinn297new">Pinnacle R 297 N</string>
+    <string name="pinn8820new">Pinnacle N</string>
+    <string name="charaknew">Charak 747 N</string>
+
+    <string name="model" translatable="false">Model</string>
+    <string name="pname" translatable="false">Patient Name</string>
+    <string name="agegender" translatable="false">Age/Gender</string>
+    <string name="leadsrno" translatable="false">Lead Sr. No.</string>
+    <string name="impldate" translatable="false">Implant Date</string>
+    <string name="date" translatable="false">Date</string>
+    <string name="dname" translatable="false">Doctor Name</string>
+    <string name="hname" translatable="false">Hospital Name</string>
+    <string name="pacethr" translatable="false">Pacing Threshold (A / V) </string>
+    <string name="sensthr" translatable="false">Sensing Threshold (A / V) </string>
+    <string name="remark" translatable="false">Remark</string>
+    <string name="save" translatable="false">Save</string>
+    <string name="impd" translatable="false">Impedance</string>
+
+    <string name="msg">Basic rate should be less than Upper Rate</string>
+</resources>

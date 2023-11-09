@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".programmer.dualchamber.FragmentParaDDD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:background="@drawable/border"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            android:id="@+id/tab1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:text="Atrium" />
+
+        <Button
+            android:id="@+id/tab2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:padding="0dp"
+            android:text="Ventricle" />
+
+        <Button
+            android:id="@+id/tab3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:padding="0dp"
+            android:text="Polarity" />
+
+        <Button
+            android:id="@+id/tab4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:padding="0dp"
+            android:text="Others" />
+
+
+
+        <Button
+            android:id="@+id/tab6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:padding="0dp"
+            android:text="Rate Response" />
+
+    </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:visibility="visible"
+        android:id="@+id/mViewAtrium"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="50dp">
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinAmp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtAmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Amplitude (V)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinPw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtPw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="PW(ms)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="50dp">
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinSens"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtSens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Sensitivity(mV)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinRef"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtRef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Refractory(ms)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:id="@+id/mViewDDDOther"
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:layout_weight="1.3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp" >
+                <RelativeLayout
+                    android:layout_width="190dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinWenkebach"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtWenkebach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Wenkebach"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                >
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinUpper"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtUpper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Upper Rate"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="30dp">
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinAutomeas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtAutomeas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Auto Measure"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="0.85"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="30dp">
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinBlanking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtBlanking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Blanking"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                >
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinPVARP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtPVARP"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="PVARP"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="0.85"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="30dp">
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinAVIPace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtAVIPace"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="AVI(Pace)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="30dp">
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinAVISens"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtAVISens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="AVI(Sens)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutCheckMri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@+id/layoutSpinHys"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkMri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mri"
+                    android:textSize="22dp"></CheckBox>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCheckSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:layout_toRightOf="@+id/layoutSpinHys"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search"
+                    android:textSize="22dp"></CheckBox>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="30dp">
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinHys"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtHys"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="AV Hysteresis"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:id="@+id/mViewPolarity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dp"
+                android:text="Pace A"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupPaceA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/paceABi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="100dp"
+                    android:text="Bi Polar"
+                    android:textSize="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/paceAUni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Uni Polar"
+                    android:textSize="20dp"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="100dp"
+                android:text="Pace V"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupPaceV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/paceVBi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="100dp"
+                    android:text="Bi Polar"
+                    android:textSize="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/paceVUni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Uni Polar"
+                    android:textSize="20dp" />
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sensitivity"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupSensitivity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/sensBi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="100dp"
+                    android:text="Bi Polar"
+                    android:textSize="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/sensUni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Uni Polar"
+                    android:textSize="20dp"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:id="@+id/mViewVentricle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="50dp">
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinVentricleAmp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtVentricleAmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Amplitude (V)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinVentriclePw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtVentriclePw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="PW(ms)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="50dp">
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinVentricleSens"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtVentricleSens"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Sensitivity(mV)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinVentricleRef"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtVentricleRef"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Refractory(ms)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:id="@+id/mViewAtp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Antitachycardia Therapy"
+                android:textSize="20dp"/>
+            <CheckBox
+                android:id="@+id/checkAtEnable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enable"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="50dp">
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinATrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtATrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="AT Rate (bpm)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="50dp">
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinATentry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtATentry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="AT Entry"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                >
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinExitCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtExitCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Exit Count"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:id="@+id/mViewRateResponse"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <CheckBox
+                android:id="@+id/checkARC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Automatic Refractory Change"></CheckBox>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="30dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="50dp">
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/UpperRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtRateRAmp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Upper Rate (bpm)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinUpTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtRateRPw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Up Time (s)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginRight="50dp">
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinDownTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="5dp"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtDownTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Down Time (m)"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/border">
+
+                    <Spinner
+                        android:id="@+id/spinSlope"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown"
+                        tools:ignore="SpeakableTextPresentCheck" />
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/txtSlope"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="#ffffff"
+                    android:textColor="@color/colorPrimary"
+                    android:text="Slope"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

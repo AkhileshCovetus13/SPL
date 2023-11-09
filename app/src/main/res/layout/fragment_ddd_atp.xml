@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dualchamber.FragmentParaDDDATP">
+
+   <LinearLayout
+       android:id="@+id/mViewAtp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:gravity="center">
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:gravity="center">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Antitachycardia Therapy"
+               android:textSize="20dp"/>
+           <CheckBox
+               android:id="@+id/checkAtEnable"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Enable"/>
+
+       </LinearLayout>
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_gravity="center">
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="15dp"
+               android:layout_marginRight="50dp">
+               <RelativeLayout
+                   android:layout_width="130dp"
+                   android:layout_height="60dp"
+                   android:layout_marginStart="5dp"
+                   android:layout_marginTop="10dp"
+                   android:background="@drawable/border">
+
+                   <Spinner
+                       android:id="@+id/spinATrate"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:spinnerMode="dropdown"
+                       tools:ignore="SpeakableTextPresentCheck" />
+               </RelativeLayout>
+               <TextView
+                   android:id="@+id/txtATrate"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:background="#ffffff"
+                   android:textColor="@color/colorPrimary"
+                   android:text="AT Rate (bpm)"
+                   android:textSize="15sp"
+                   />
+           </RelativeLayout>
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="15dp"
+               android:layout_marginRight="50dp">
+               <RelativeLayout
+                   android:layout_width="130dp"
+                   android:layout_height="60dp"
+                   android:layout_marginStart="5dp"
+                   android:layout_marginTop="10dp"
+                   android:background="@drawable/border">
+
+                   <Spinner
+                       android:id="@+id/spinATentry"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:spinnerMode="dropdown"
+                       tools:ignore="SpeakableTextPresentCheck" />
+               </RelativeLayout>
+               <TextView
+                   android:id="@+id/txtATentry"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:background="#ffffff"
+                   android:textColor="@color/colorPrimary"
+                   android:text="AT Entry"
+                   android:textSize="15sp"
+                   />
+           </RelativeLayout>
+           <RelativeLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="15dp"
+               >
+               <RelativeLayout
+                   android:layout_width="130dp"
+                   android:layout_height="60dp"
+                   android:layout_marginStart="5dp"
+                   android:layout_marginTop="10dp"
+                   android:background="@drawable/border">
+
+                   <Spinner
+                       android:id="@+id/spinExitCount"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:spinnerMode="dropdown"
+                       tools:ignore="SpeakableTextPresentCheck" />
+               </RelativeLayout>
+               <TextView
+                   android:id="@+id/txtExitCount"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="10dp"
+                   android:background="#ffffff"
+                   android:textColor="@color/colorPrimary"
+                   android:text="Exit Count"
+                   android:textSize="15sp"
+                   />
+           </RelativeLayout>
+       </LinearLayout>
+   </LinearLayout>
+
+</FrameLayout>

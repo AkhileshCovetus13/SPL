@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">SPL-Demo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="marker">Marker</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="next">Next</string>
+    <string name="period">Period</string>
+    <string name="bpm"> bpm</string>
+    <string name="ms"> ms</string>
+    <string name="spin_title_mode" tools:ignore="ExtraTranslation">режим</string>
+    <string name="msg">Basic rate should be less than Upper Rate</string>
+</resources>

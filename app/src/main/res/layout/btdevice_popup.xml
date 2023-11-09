@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/frmBTDevice">
+
+    <TextView
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Select Device"
+        android:textSize="25sp" />
+
+    <ProgressBar
+        android:paddingRight="12dp"
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:focusedByDefault="true"/>
+  </FrameLayout>
+  <!--android:indeterminateTint="@color/CHERRY"/>-->
+  <ListView
+      android:layout_above="@+id/mTvRunAsDemo"
+      android:id="@+id/btdevice_list"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/frmBTDevice"
+      android:layout_alignStart="@id/frmBTDevice"
+      android:background="@android:color/darker_gray">
+
+  </ListView>
+
+  <TextView
+      android:textColor="@color/colorPrimary"
+      android:textStyle="bold"
+      android:layout_alignParentBottom="true"
+      android:id="@+id/mTvRunAsDemo"
+      android:paddingLeft="12dp"
+      android:paddingTop="12dp"
+      android:paddingBottom="12dp"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:text="Run as Demo"
+      android:textSize="25sp" />
+
+  <ImageView
+      android:layout_marginRight="12dp"
+      android:layout_marginBottom="8dp"
+      android:layout_alignParentRight="true"
+      android:layout_alignParentBottom="true"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:src="@drawable/ic_arrow_forward"/>
+
+</RelativeLayout>
